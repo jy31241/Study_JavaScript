@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+// 201332012 박준영
+        var book = {
+            책제목 : "자바", 가격:1000,출판연도:2015
+        };
+        book.저자='박준영'; //동적추가
+        book.toString = function(){//출력함수 선언
+            var ouput="";
+            ouput+="책제목: "+book.책제목 +"\n가격: "+book.가격+"\n출판연도: "+book.출판연도+"\n저자: "+book.저자;
+            return ouput;
+        }
+        alert(book.toString());
+        
+        
+    </script>
+</head>
+<body>
+</body>
+</html>

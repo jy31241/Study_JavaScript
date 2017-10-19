@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+// 201332012 박준영 hw7_1
+        function Book(name,price,year,author){ //Book생성자함수
+                this.이름 = name,
+                this.가격 = price,
+                this.년도 = year,
+                this.저자 = author
+        }
+        Book.prototype.discount = function(){
+            if(this.년도==2014){ // 2014년은 10%할인
+                this.가격*=0.9;
+                return '이름: '+this.이름 + ' 가격: ' + this.가격 + ' 년도: ' + this.년도 + ' 저자: ' + this.저자;
+            }
+            else if(this.년도<2014){//2014년 이전은 50%할인
+                this.가격*=0.5;
+                return '이름: '+this.이름 + ' 가격: ' + this.가격 + ' 년도: ' + this.년도 + ' 저자: ' + this.저자;
+            }
+        };
+        Book.prototype.toString = function(){
+            return '이름: '+this.이름 + ' 가격: ' + this.가격 + ' 년도: ' + this.년도 + ' 저자: ' + this.저자;
+        }
+        var books = []; //books 배열에 책정보입력
+        books.push(new Book('java',10000,2014,'정우성'));
+        books.push(new Book('database',20000,2013,'장동건'));
+        books.push(new Book('computer',30000,2009,'강동원'));
+        
+        //출력문
+        document.writeln("----정상 가격----</br>")
+        for (var i in books){
+            document.writeln(books[i].toString() + '</br>');
+        }
+        
+        document.writeln("</br>----할인 가격----</br>")
+        for (var j in books){
+            document.writeln(books[j].discount()+ '</br>');
+        }
+    </script>
+</head>
+<body>
+</body>
+</html>

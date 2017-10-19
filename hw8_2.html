@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+// 201332012 박준영 hw8_2
+        var input = prompt("입력 :");
+        document.writeln("문장 : "+input+"</br>");
+        document.writeln("길이 : "+input.length+"</br>");
+        
+        var regExp = /a/gi; //정규식표현 대소문자 구분x
+        document.writeln("a,A의 갯수: "+ input.match(regExp).length+"</br>");
+        document.writeln(input.replace(regExp,"*"))//a,A를 *로 대체
+    </script>
+</head>
+<body>
+</body>
+</html>

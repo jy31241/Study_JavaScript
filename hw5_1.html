@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+// 201332012 박준영
+        function showBMI(height,weight){
+            var BMI = (height-100)*0.9;
+
+                if(weight>=BMI){
+                    alert("정상몸무게 이상")
+                } 
+                else if(weight<BMI){
+                    alert("정상몸무게 미만")
+                }
+        }
+        var w = prompt("몸무게: ");
+        var h = prompt("키 : ");
+        showBMI(w,h);
+            
+        
+    </script>
+</head>
+<body>
+</body>
+</html>

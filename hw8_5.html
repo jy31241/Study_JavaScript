@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+// 201332012 박준영 hw8_5
+        var d = new Date();//현재 날짜
+        var worldcup = new Date();//2002월드컵 날짜
+        worldcup.setFullYear(2002);
+        worldcup.setMonth(4);
+        worldcup.setDate(31);
+        var dday = new Date("2017-12-31");// 금년말일
+        var gap = dday.getTime()-d.getTime();
+        gap = Math.floor(gap/(1000*60*60*24));
+        
+  
+        document.write("오늘은 "+d.getFullYear()+"년 "+(d.getMonth()+1)+"월 "+d.getDate()+"일 입니다.</br> ");
+        document.write(worldcup.getFullYear()+"년 월드컵은 "+ worldcup.getFullYear()+ "년 " + worldcup.getMonth()+ "월 " + worldcup.getDate()+ "일에 있었습니다. </br>");
+        document.write("금년말일까지 날짜는" + gap + "일 남았습니다.")
+        
+    </script>
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+// 201332012 박준영
+        var perId1 = prompt("주민등록번호 앞자리 입력: ");
+        var perId2 = prompt("주민등록번호 뒷자리 입력: ");
+        var year = parseInt(perId1/10000)>9?parseInt(perId1/10000): "0"+parseInt(perId1/10000);//00년생~09년생은 앞에 0붙여줌
+        
+        
+        alert("생년월일은 다음과 같습니다.")
+        alert(perId2<3000000?"19"+year+"년":"20"+year+"년");//뒷자리 1,2면 1900년대생 3부터는 2000년생/ 1800년대생은 제외
+        alert(parseInt((perId1%10000)/100)+"월");
+        alert((perId1%100000)%100+"일")
+    </script>
+</head>
+<body>
+
+</body>
+</html>

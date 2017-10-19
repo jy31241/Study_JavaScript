@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+// 201332012 박준영 hw8_4
+        var book = [
+            {책제목 : "자바", 가격:1000,출판연도:2015},
+            {책제목 : "파이썬", 가격:2000,출판연도:2015},
+            {책제목 : "하스켈", 가격:3000,출판연도:2015},
+            {책제목 : "루아", 가격:4000,출판연도:2015}
+        ];
+        
+        var srt = "가격";
+        book.sort(function(a, b) { // 내림차순
+            return b[srt] - a[srt];
+        });
+        document.writeln("-------비싼순 정렬------</br>");
+        for(var i=0;i<book.length;i++){
+            document.writeln("책제목: "+book[i].책제목);
+            document.writeln("가격: "+book[i].가격);
+            document.writeln("출판연도: "+book[i].출판연도);
+            document.writeln("</br>");
+        }
+
+        book = book.slice(0,2); // 비싼거 2개
+        document.writeln("-------비싼거 2개 slice------</br>");
+        for(var i=0;i<book.length;i++){
+            document.writeln("책제목: "+book[i].책제목);
+            document.writeln("가격: "+book[i].가격);
+            document.writeln("출판연도: "+book[i].출판연도);
+            document.writeln("</br>");
+        }
+    </script>
+</head>
+<body>
+</body>
+</html>

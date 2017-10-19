@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+// 201332012 박준영 hw8_3
+        var email = prompt("이메일을 입력하세요");     
+        var array = [/co.kr/gi,/com/gi,/net/gi,/or.kr/gi,/go.kr/gi];//필터링할것들 배열
+        var count = 0;//필터링 대상 카운트
+        for(var i in array){
+            if(email.indexOf(email.match(array[i]))==-1){//필터링
+                count++;//필터링 당할 때 마다 카운트 1씩추가
+            }
+        }
+        if(email.indexOf("@")==-1){// 골뱅이 없으면 에러!
+            alert("이메일에 @가 없습니다.")
+        }
+        else if(count==array.length){//필터링 목록 전부다 통과 못하면 경고메시지 출력
+            alert("이메일 형식이 잘못됬습니다.");
+        }
+        else{
+            document.writeln("입력한 이메일: "+email);
+        }
+    </script>
+</head>
+<body>
+</body>
+</html>

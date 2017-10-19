@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+// 201332012 박준영
+        var count = 0; //직각 삼각형의 수
+        for(var a=1; a<100; a++){// 변의길이는 1~99까지
+            for(var b=1; b<100; b++){
+                for(var c=1; c<100; c++){
+                    if(a*a+b*b==c*c){
+                        count++;
+                        document.writeln("("+a+"/"+b+"/"+c+")");
+                        if(count%5==0){ // 직각삼각형 5개마다 줄바꿈
+                            document.write("<br />");
+                        }
+                    }
+                }
+            }
+        }
+        document.write("<br /><br />직각 삼각형의 수: "+count);
+    </script>
+</head>
+<body>
+</body>
+</html>
