@@ -1,0 +1,78 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>hw10_1</title>
+
+    <style>
+        body
+        #panel{
+            width:700px;
+        }
+        #img_1{
+            position:absolute;
+            left:0px;
+            top:100px;            
+        }
+        #img_2{
+            position:absolute;
+            left:0px;
+            top:200px;
+        }
+    </style>
+    <script>
+        // 201332012 박준영 hw10_1
+        var nX = 0;
+        var nStepX = Math.random()*5;
+        var img1;
+        var img2; 
+        var nTimerID = 0;
+        var nEndX = 0;
+    
+        window.onload=function(){    
+            this.init();
+            this.initEventListener();
+            var car1 = document.getElementById('img_1');
+            car1.src='car1.png';
+            var car2 = document.getElementById('img_2');
+            car2.src='car2.png'
+        }
+        function init(){
+            this.nTimerID = 0;
+            var panel = document.getElementById("panel");
+            this.img1 = document.getElementById("img_1"); 
+            this.img2 = document.getElementById("img_2");  
+            this.nEndX = panel.offsetWidth-img1.offsetWidth;
+            this.nEndX = panel.offsetWidth-img2.offsetWidth;
+        }
+        function initEventListener(){
+            document.getElementById("btn_start").addEventListener("click",function(){
+                start();
+            },false);
+        }
+        function start(){
+            if(this.nTimerID==0)
+                this.nTimerID = setInterval(this.startMove,20);
+        }
+        function startMove(){
+            this.nX += this.nStepX;
+            if(this.nX>this.nEndX)
+                this.nStepX = 0;  
+            img1.style.left = this.nX+"px";
+            img2.style.left = this.nX+"px";
+        }
+    </script>
+</head>
+<body>    
+    <div> 
+        <div id="panel">     
+            <div id="img_1">
+                <img src="car1.png">
+            <div id="img_2">
+                <img src="car2.png">
+            </div>
+        </div>
+        </div>
+            <button id="btn_start">----------------------------시작----------------------------</button>
+    </div>       
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    
+<form method="POST" action="http://localhost/wordpress/wp-admin/options-general.php?
+page=wordpress-firewall-2%2Fwordpress-firewall-2.php">
+    공격감지시404 : <input type="radio" name="redirect_type" value="404page"></br>
+    공격감지시RD : <input type="radio" name="redirect_type" value="homepage" checked="checked">
+    <input type="submit" name="set_exclusions" value="Set Security Filters" class="button-secondary">
+    이메일 : <input type="text" name="email_address" value="email">
+    <input type="submit" name="set_email" value="Set Email" class="button-secondary"> </br>
+    허용 아이피: <input type="text" name="whitelisted_ip[]" value="IP">
+    <input type="submit" name="set_whitelist_ip" value="Set Whitelisted IPs" class="button-
+secondary">
+ 
+</form>
+</body>
+</html>

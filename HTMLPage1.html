@@ -5,11 +5,24 @@
     <meta charset="utf-8" />
     <title></title>
     <script>
-// 201332012 박준영
-        window.open('https://www.naver.com','Chrome',true);
+// 201332012 박준영 hw10_1
+        window.onload = function() {
+            var car1 = document.getElementById('car1');
+            car1.src = 'car1.png';
+            document.body.appendChild(car1);
+            
+            movecar = function(){
+                car1.style.right=speed(10)+'px';
+            }
+        }
+        
+        function speed(maxspeed){
+            return Math.random() * maxspeed - Math.random() *maxspeed;
+        }
 
     </script>
 </head>
 <body>
+    <img id='car1'/>
 </body>
 </html>
