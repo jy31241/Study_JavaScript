@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html>
+<head><!--201332012 박준영 hw11_2-->
+    <script>
+        window.onload = function(){
+            document.getElementById('my-form').onsubmit = function(){
+
+            var pass = document.getElementById('pass').value;
+            var passCheck = document.getElementById('pass-check').value;
+            var email = document.getElementById('email').value;
+            var check=0;
+            if(pass.length<8){
+                alert("비밀번호가 8자 미만입니다.");
+                check++;
+                location.reload();
+            }
+            if(pass != passCheck){
+                alert("비밀번호가 서로 다릅니다");
+                check++;
+                location.reload();
+            }
+            var array = [/co.kr/gi,/com/gi,/net/gi,/or.kr/gi,/go.kr/gi];//필터링할것들 배열
+            var count = 0;//필터링 대상 카운트
+            for(var i in array){
+                if(email.indexOf(email.match(array[i]))==-1){//필터링
+                    count++;//필터링 당할 때 마다 카운트 1씩추가
+                }
+            }
+            if(email.indexOf("@")==-1){// 골뱅이 없으면 에러!
+                alert("이메일 형식이 잘못됬습니다.");
+                check++;
+                location.reload();
+            }
+            else if(count==array.length){//필터링 목록 전부다 통과 못하면 경고메시지 출력
+                alert("이메일 형식이 잘못됬습니다.");
+                check++;
+                location.reload();
+            }
+            if(check==0){
+                alert("확인성공");
+            }
+            }
+            }
+    </script>
+</head>
+<body>
+    <form id="my-form">
+        <label for="name">이름</label><br/>
+        <input type="text" name="name" id="name" /><br/>
+        <label for="pass">비밀번호</label><br/>
+        <input type="password" name="pass" id="pass" /><br/>
+        <label for="pass-check">비밀번호 확인</label><br/>
+        <input type="password" id="pass-check" /><br/>
+        <label for="email">이메일주소</label><br/>
+        <input type="text" id="email" /><br/>
+        <input type="submit" value="제출" />
+    </form>
+</body>
+</html>
