@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <style>
+        .high-light-0 { background: yellow;}
+        .high-light-1 { background: blue;}
+        .high-light-2 { background: green;}
+    </style>
+    <meta charset="utf-8" />
+    <script src='http://code.jquery.com/jquery-1.10.2.js'></script>
+    <script>// 201332012 박준영 hw
+        $(document).ready(function (){
+            $('body>h2').css('color','red');
+            $('input[type="password"]').val("asdfasdf");
+            $('tr:odd').css('background', '#9f9f9f');
+            $('tr:nth-child(2n+1)').css('background', '#565656');
+            
+            $('h1').each(function (index, item) {
+                $(item).addClass('high-light-' + index);
+            }); $('h3').eq(2).css('color','blue').end().filter(':odd').css('background','yellow');
+            var object = {};
+            object.name="jun";
+            object.age=24;
+            $('h3').each(function(){
+                if($(this).is('#abc')){
+                    $(this).css('color','red');
+                }
+            });
+            $('h3').addClass(function(index){
+                return 'class'+index;
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1 class="a">aaa1</h1>
+    <h1>item - 0</h1>
+    <h1>item - 1</h1>
+    <h2>aa2</h2>
+    <h3>aa3</h3>
+    <input type="password"/>
+    <select>
+    <option>Apple</option>
+    <option>Bag</option>
+    </select>
+    <table>
+        <tr><th>1</th></tr>
+        <tr><th>2</th></tr>
+        <tr><th>3</th></tr>
+        <tr><th>4</th></tr>
+    </table>
+    <h3 id="abc">Header-0</h3>
+    <h3>Header-1</h3>
+    <h3>Header-2</h3>
+    <h3>Header-3</h3>
+    <h3>Header-4</h3>
+    <h3>Header-5</h3>
+    <h2>Header-6</h2>
+
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <style>
+    </style>
+    <meta charset="utf-8" />
+    <script src='http://code.jquery.com/jquery-1.10.2.js'></script>
+    <script>// 201332012 박준영 hw15_4
+        $(document).ready(function(){
+            $('a[title]').css('background','yellow');
+            $('a[href="http://www.nate.com"]').css('background','pink');
+            $('a[href^="mailto"]').css('background','aqua');
+            $('a[href$="net"]').css('background','purple');
+            $('a[href*="google"]').css('background','orange');
+        });
+    </script>
+</head>
+<body>
+    <h1>탐색 선택자</h1>
+    <ul>
+        <li><a href="http://www.naver.com" title="네이버 이동">네이버</a></li>
+        <li><a href="mailto:ciycc@naver.com">관리자에게</a></li>
+        <li><a href="http://www.nate.com">네이트</a></li>
+        <li><a href="http://www.daum.net">다음</a></li>
+        <li><a href="http://www.google.com">구글</a></li>
+   </ul>
+</body>
+</html>

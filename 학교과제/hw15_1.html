@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <style>
+    </style>
+    <meta charset="utf-8" />
+    <script src='http://code.jquery.com/jquery-1.10.2.js'></script>
+    <script>// 201332012 박준영 hw15_1
+        $(document).ready(function(){
+            var src = $('#wrap>*').attr('src');
+            // 이날 수업참여 안해서 문제가 이해가 안됩니다. '텍스트로 생성' 이 텍스트벨류값을 넣으라는건지 출력하란건지...?
+            $('#txt').attr('txt',src);
+            $('#wrap>*').attr('width',200); //너비200변경
+            $('#box>*').removeAttr('border');//border속성 제거
+        });
+    </script>
+</head>
+<body>
+<body>
+    <h1>객체 조작 및 생성</h1>
+    <p id="wrap">
+        <img src="images/math_img_1.jpg" alt="가위" width="100" />
+    </p>
+    <p id="txt"></p>
+    <p id="box">
+        <img src="images/math_img_3.jpg" alt="보" width="100" border="2"/>
+</p>
+</body>
+</body>
+</html>
